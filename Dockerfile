@@ -19,9 +19,9 @@ FROM openjdk:8-jdk
 
 RUN mkdir /app
 
-COPY one-login-mock-1.0.0-SNAPSHOT.jar /app/quarkus-app.jar
+COPY . /app/
 
 WORKDIR /app
 
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "quarkus-app.jar"]
+ENTRYPOINT ["java", "-jar", "quarkus-run.jar"]
