@@ -15,7 +15,7 @@
 # EXPOSE 8080
 # CMD ["./application", "-Dquarkus.http.host=0.0.0.0"]
 
-FROM openjdk:8-jdk
+FROM openjdk:11
 
 RUN mkdir /app
 
