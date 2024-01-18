@@ -63,18 +63,9 @@ jobs:
       - name: List files in the current directory
         run: ls
 
-      - name: List files in the parent directory
-        run: ls -l Dockerfile
-
       - name: Build and Push
         uses: docker/build-push-action@v3
         with:
           context: .
           push: true
           tags: ${{ env.DOCKER_IMAGE_NAME }}:${{ env.DOCKER_TAG_VERSION }}
-
-      # - name: Cleanup job
-      #   uses: rokroskar/workflow-run-cleanup-action
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     DEBUG: FALSE
