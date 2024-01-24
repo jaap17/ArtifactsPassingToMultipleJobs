@@ -15,7 +15,7 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
-      - name: Package the quarkus app
+      - name: Clean and Package the quarkus app
         run: mvn clean package
 
       - name: Upload the artifact file to GitHub Actions storage
