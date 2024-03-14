@@ -1,0 +1,22 @@
+name: Clone Repository with GH_PAT
+
+on:
+  workflow_call:
+    secrets:
+      GH_PAT:
+        required: true
+
+jobs:
+  clone_repository:
+    name: Clone Repository
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Clone repository with GH_PAT
+      run: |
+        git clone https://$GH_PAT@github.com/jaap17/QuarkusGithubActions.git
+      env:
+        GH_PAT: ${{ secrets.GH_PAT }}
