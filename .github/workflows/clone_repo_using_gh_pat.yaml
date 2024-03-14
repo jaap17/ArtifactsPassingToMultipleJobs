@@ -12,11 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
 
     - name: Clone repository with GH_PAT
       run: |
-        git clone https://$GH_PAT1@github.com/jaap17/QuarkusGithubActions.git
+        git clone https://$GH_PAT@github.com/jaap17/QuarkusGithubActions.git
       env:
-        GH_PAT: ${{ secrets.GH_PAT1 }}
+        GH_PAT: ${{ secrets.GH_PAT }}
