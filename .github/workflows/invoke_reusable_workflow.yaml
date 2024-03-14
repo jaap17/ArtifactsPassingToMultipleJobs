@@ -1,0 +1,12 @@
+name: Reusable Workflow caller
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call_workflow_in_same_repo:
+    uses: ./.github/workflows/clone_repo_using_gh_pat.yaml
+    secrets:
+      GH_PAT: ${{ secrets.GH_PAT }}
