@@ -17,6 +17,6 @@ jobs:
 
     - name: Clone repository with GH_PAT
       run: |
-        git clone https://$GH_PAT@github.com/jaap17/QuarkusGithubActions.git
+        git clone https://$GH_PAT1@github.com/jaap17/QuarkusGithubActions.git
       env:
-        GH_PAT: ${{ secrets.GH_PAT }}
+        GH_PAT: ${{ secrets.GH_PAT1 }}
