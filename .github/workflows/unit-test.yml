@@ -16,13 +16,10 @@
             distribution: 'temurin'
 
         - name: Build with Maven
-          run: mvn clean package
-
-        - name: Run unit test cases
-          run: mvn verify
+          run: mvn package
 
         - name: Printing Directory structure
-          run: ls -l
+          run: ls -R target/
 
         - name: Report
           uses: dorny/test-reporter@v1
