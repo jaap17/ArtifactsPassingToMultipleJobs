@@ -21,20 +21,8 @@
         - name: Generate Jacoco Test Report
           run: mvn verify
 
-        - name: Printing Directory structure
-          run: ls -R target/surefire-reports
-
-#        - name: Upload coverage report
-#          uses: actions/upload-artifact@v3
-#          with:
-#            name: coverage-report
-#            path: target/jacoco-report/jacoco.xml
-
-        - name: Report
-          uses: dorny/test-reporter@v1
-          if: always()
+        - name: Upload coverage report
+          uses: actions/upload-artifact@v3
           with:
-            name: Maven Tests
-            path: target/jacoco-report/jacoco.csv
-            reporter: java-junit
-            fail-on-error: true
+            name: coverage-report
+            path: target/jacoco-report/jacoco.xml
