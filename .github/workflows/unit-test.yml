@@ -35,6 +35,6 @@
           if: always()
           with:
             name: Maven Tests
-            path: target/surefire-reports/jacoco.xml
+            path: target/jacoco-report/jacoco.xml
             reporter: java-junit
             fail-on-error: true
