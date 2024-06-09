@@ -21,6 +21,9 @@
         - name: Run unit test cases
           run: mvn verify
 
+        - name: Printing Directory structure
+          run: ls -l
+
         - name: Report
           uses: dorny/test-reporter@v1
           if: always()
